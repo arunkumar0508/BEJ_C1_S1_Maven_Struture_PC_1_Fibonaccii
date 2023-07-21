@@ -17,6 +17,7 @@ public class AppTest
      */
     public AppTest( String testName )
     {
+
         super( testName );
     }
 
@@ -25,6 +26,8 @@ public class AppTest
      */
     public static Test suite()
     {
+
+
         return new TestSuite( AppTest.class );
     }
 
@@ -34,5 +37,16 @@ public class AppTest
     public void testApp()
     {
         assertTrue( true );
+    }
+
+
+    public void testFibonacciSeries() throws IllegalAccessException {
+        int[] expected={0,1,1,2,3,5,8,13,21,34,55,89};
+        int[] actual=App.fibonacciSeries(12);
+
+        assertEquals(expected.length, actual.length);
+        for(int i=0;i<expected.length;i++){
+            assertEquals(expected[i],actual[i]);
+        }
     }
 }
