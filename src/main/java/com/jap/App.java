@@ -26,7 +26,7 @@ public class App {
 
         try {
 
-            for(int num: fibonacciSeries(10)){
+            for(int num: fibonacciSeries(12)){
                 System.out.println(num);
             }
         } catch (IllegalAccessException e) {
